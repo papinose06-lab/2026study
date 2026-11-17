@@ -22,3 +22,6 @@ def radix_sort(A):
                 j+=1
         factor*=10               #각 자릿수를 정렬하면 한 자리 높이기
         print("step", d+1, A)    #단계(자릿수)별 확인
+
+# 시간복잡도: O(dn)=O(n) - line16
+# 공간복잡도: O(n)       - line17
