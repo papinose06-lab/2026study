@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>stopwatch</title>
+</head>
+<body>
+    <h2>Stopwatch</h2>
+    <form action="#">
+        <h3 id="second">0초</h3>
+        <input type="button" value="start" onclick="stopped=false; setTimeout(count, 1000);" />
+        <input type="button" value="stop" onclick="stopped=true;" />
+    </form>
+    <script>
+        let stopped=false;
+        function count() {
+            const dom=document.getElementById("second");
+            const currentSecond=parseInt(dom.innerText.replace("초",""));
+            dom.innerText='${currentSecond + 1}초';
+            if (!stopped) setTimeout(count, 1000);
+        }
+    </script>
+</body>
+</html>
